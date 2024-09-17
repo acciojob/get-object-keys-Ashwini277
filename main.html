@@ -3,36 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Object Keys</title>
+  <title>Object Keys</title>
 </head>
 <body>
 
   <h1>Object Prototype Extension</h1>
 
   <div>
-    <h2>Student Object Keys</h2>
+    <h2>Object Keys Example</h2>
     <p id="keys-output"></p>
   </div>
 
-  <script>
-    // Define the student object
-    const student = {
-      name: 'John Doe'
-    };
-
-    // Add getKeys method to Object prototype
-    Object.prototype.getKeys = function() {
-      return Object.keys(this);
-    };
-
-    // Get the keys of the student object using the new method
-    const keys = student.getKeys();
-
-    // Display the keys in the HTML
-    document.getElementById('keys-output').innerHTML = `
-      Keys: ${keys.join(', ')}
-    `;
-  </script>
+  <!-- Include your script file -->
+  <script src="./script.js"></script>
 
 </body>
 </html>
