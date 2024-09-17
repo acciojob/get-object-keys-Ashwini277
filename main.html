@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Object Keys</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <h1>Object Prototype Extension</h1>
+
+  <div>
+    <h2>Student Object Keys</h2>
+    <p id="keys-output"></p>
+  </div>
+
+  <script>
+    // Define the student object
+    const student = {
+      name: 'John Doe'
+    };
+
+    // Add getKeys method to Object prototype
+    Object.prototype.getKeys = function() {
+      return Object.keys(this);
+    };
+
+    // Get the keys of the student object using the new method
+    const keys = student.getKeys();
+
+    // Display the keys in the HTML
+    document.getElementById('keys-output').innerHTML = `
+      Keys: ${keys.join(', ')}
+    `;
+  </script>
 
 </body>
-
 </html>
